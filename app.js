@@ -8,6 +8,7 @@ var newTasks = [];
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended:true}));
+app.use(express.static("public"));
 
 // Get Function - sets date/day and renders it on server//
 app.get("/", function(req, res) {
