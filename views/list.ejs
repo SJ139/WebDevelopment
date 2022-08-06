@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
 
-<head>
-  <meta charset="utf-8">
-  <title>ToDoListV1</title>
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-
-<body>
-  <div class="box" id="heading">
-    <h1><%= dayOfWeek %></h1>
-  </div>
-
+==>Applies Header to all pages on the site using header.ejs %>
+<%- include('header'); -%>
 
   <div class="box">
     <% for (var i=0; i< newListItem.length; i++){ %>
@@ -24,13 +13,10 @@
 
     <form class="item" action="/" method="post">
       <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-      <button type="submit" name="button">+</button>
+      <button type="submit" name="list", value=<%=listTitle %>>+</button>
     </form>
 
   </div>
-
-
-
 </body>
 
-</html>
+<%- include('footer'); -%>
